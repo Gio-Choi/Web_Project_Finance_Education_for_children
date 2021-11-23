@@ -1,0 +1,35 @@
+#result_2{
+  display: none;
+  background-color: whitesmoke;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#shareResult_2{
+  background-color: whitesmoke;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.resultname_2{
+  font-size: 26px;
+}
+
+.resultDesc_2{
+  font-size: 20px;
+}
+
+.gohome{
+  color: white;
+  background-color: pink;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 20px;
+}
+
+.gohome:hover, .gohome:focus {
+  background-color: whitesmoke;
+  color: pink;
+}

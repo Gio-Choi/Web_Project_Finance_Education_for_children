@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="KhuFin">
+    <meta name="keywords" content="초등학생을 위한 금융 교육">
+    <meta name="description" content="초등학생을 위한 금융 교육">
+
+    <meta property="or:url" content="https://khufin.netlify.app" />
+    <meta property="og:title" content="초등학생을 위한 금융 교육" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./img/main_picture.jpg" />
+    <meta property="og:description" content="초등학생을 위한 금융 교육" />
+
+    <link rel="shortcut icon" href="img/dollar.png" />
+    <link rel="apple-touch-icon-precomposed" href="img/dollar.png" />
+
+    <title>쿠옹이가 알려주는 금융 지식</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/qna.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/result.css">
+    <link rel="stylesheet" href="./css/input.css">
+    <link rel="stylesheet" href="./css/ask_gift.css">
+    <link rel="stylesheet" href="./css/simul_1.css">
+    <link rel="stylesheet" href="./css/simul_2.css">
+    <link rel="stylesheet" href="./css/quiz_main.css">
+    <link rel="stylesheet" href="./css/quiz.css">
+    <link rel="stylesheet" href="./css/result_2.css">
+  </head>
+  <body>
+    <div class="container">
+
+    <section id = "main" class="mx-auto my-5 py-5 px-3">
+      <h1>초등학생을 위한 금융 교육</h1>
+
+      <p>21-2학기 '디자인적사고' 프로젝트 (21.9 ~ 진행중)</p>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+      <img src="./img/main_picture.jpg" alt="mainImage" class="img-fluid">
+    </div>
+
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goInput()">시작하기</button>
+    </section>
+
+
+    <section id = "input" class="mx-auto my-5 py-5 px-3">
+      <p>너에 대해 알려 줄래?</p>
+      <form method="get" action="form_app.js">
+        성별: <input type="radio" name="sex" value="male"/>남성
+           <input type="radio" name="sex" value="female"/>여성<br>
+        출생년도: <select name="year" size="1">
+            <option>2014</option> <option>2013</option> <option>2012</option> <option>2011</option>
+            <option>2010</option> <option>2009</option> <option>2008</option> <option>2007</option>
+            <option>2006</option>
+        </select>
+        <p>
+        너가 좋아하는 계절을 알려줄래? <br>
+        계절: <input type="checkbox" name="goods" value="tech"/>봄
+          <input type="checkbox" name="goods" value="idol"/>여름
+          <input type="checkbox" name="goods" value="food"/>가을
+          <input type="checkbox" name="goods" value="food"/>겨울
+          <br>
+        교육 받기 전 각오: <br>
+        <textarea name="comments" rows="4" cols="40"/></textarea>
+        </p> <hr>
+      </form>
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goToGift()">다음</button>
+    </section>
+
+
+    <section id = "ask_gift" class="mx-auto my-5 py-5 px-3">
+      <p>갖고 싶은 물건 골라줘 ~ </p>
+      <p>여기서 사용자가 본인의 관심사를 선택할 수 있게 합니다.</p>
+      <p>무엇을 관심사 명단에 넣을지 정하고 있습니다.</p>
+
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin()">소비습관 테스트</button>
+
+    </section>
+
+
+    <section id = "qna">
+      <div class="status mx-auto mt-5">
+        <div class="statusBar">
+        </div>
+      </div>
+      <div class="qBox my-5 py-3 mx-auto">
+    </div>
+    <div class="answerBox">
+    </div>
+    </section>
+
+    <section id="result" class="mx-auto my-5 py-5 px-3">
+      <h1>너는 바로 !!</h1>
+      <div class="resultname">
+
+      </div>
+      <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+      </div>
+      <div class="resultDesc">
+
+      </div>
+      <button type="button" class="kakao mt-3 py-2 px-3" onclick="js:goTosimul_1()">따라와봐~</button>
+    </section>
+
+    <section id='simul_1' class="mx-auto my-5 py-5 px-3">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+      <img src="./img/simul_1.jpg" alt="mainImage" class="img-fluid">
+    </div>
+     <p>이 단계는 시뮬레이션 단계이며, 아직 만드는 중입니다.</p>
+    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_2()">다음</button>
+    </section>
+
+    <section id="simul_2"  class="mx-auto my-5 py-5 px-3">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+      <img src="./img/simul_2.jpg" alt="mainImage" class="img-fluid">
+    </div>
+      <p>이 단계는 시뮬레이션 단계이며, 아직 만드는 중입니다.</p>
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goToquiz_main()">다음</button>
+    </section>
+
+
+    <section id="quiz_main" class="mx-auto my-5 pb-5 pt-5 px-3">
+      <div class="col-lg-5 col-md-5 col-sm-5 col-5 mx-auto">
+        <img src="./img/quiz_main.png" alt="mainImage" class="img-fluid">
+      </div>
+      <p>
+        쿠옹이랑 같이 다니면서 알게 된 사실들이 많지? <br>
+        마지막으로 확인할 겸 퀴즈까지만 풀어보자!<br>
+        그럼 화이팅!
+      </p>
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin_2()">시작하기</button>
+    </section>
+
+
+    <section id="quiz" class="mx-auto my-5 pb-5 pt-5 px-3">
+      <div class="status_2 mx-auto mt-5">
+        <div class="statusBar_2">
+        </div>
+      </div>
+      <div class="qBox_2 my-5 py-3 mx-auto">
+    </div>
+    <div class="answerBox_2">
+    </div>
+  </section>
+
+
+
+    <section id="result_2" class="mx-auto my-5 py-5 px-3">
+      <h1>수고했어 ~ 선물줄게</h1>
+      <p>결과 페이지는 사용자가 초반에 선택한 관심사에 따라 달리 보여질 예정입니다.</p>
+      <div class="resultname_2">
+      </div>
+      <div id="resultImg_2" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+      </div>
+      <div class="resultDesc_2">
+      </div>
+    </section>
+
+
+    <script src="./js/data.js" charset="utf-8"></script>
+    <script src="./js/start.js" charset="utf-8"></script>
+
+</div>
+
+
+      </body>
+</html>
