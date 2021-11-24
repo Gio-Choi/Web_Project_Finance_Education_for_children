@@ -4,7 +4,7 @@
 
 ### 초등학생을 위한 금융 교육 웹페이지
 ### 21-2학기 '디자인적사고'수업 
-### 사용 언어 : html, css, Javascript
+### 사용 언어 : HTML, CSS, Javascript
 ![폰_구현_예시](https://user-images.githubusercontent.com/66895650/143240781-1983de6d-4cf0-4fb9-a44a-96e21ce7b327.png)
 
 ### 초등학생들이 쉽게 금융을 이해할 수 있도록, User Friendly하게 디자인하고 있습니다. 
