@@ -20,7 +20,7 @@
 }
 
 .answerList:hover, .answerList:focus {
-  background-color: grey; /*마우스를 갖다 대면 색이 변함*/
+  background-color:rgb(247, 213, 102); /*마우스를 갖다 대면 색이 변함*/
   color: whitesmoke;
 }
 
@@ -33,7 +33,16 @@
 
 .statusBar {
   height: 100%;
-  border-radius: 20px; /*둥글게 만들어줌*/
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+52,ff5c5c+100;Red+3D+%231 */
-  background-color: aqua;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3deff+0,66affc+100 */
+  background: #b3deff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #b3deff 0%, #66affc 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #b3deff 0%, #66affc 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #b3deff 0%, #66affc 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3deff', endColorstr='#66affc', GradientType=0);
+  /* IE6-9 */
+  border-radius: 20px;
 }
