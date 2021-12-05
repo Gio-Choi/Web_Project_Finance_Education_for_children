@@ -133,7 +133,7 @@ function goToGift(){
   }
 
   if(document.getElementsByName("goods")[0].checked==false && document.getElementsByName("goods")[1].checked==false&&document.getElementsByName("goods")[2].checked==false){
-    alert("하수, 중수, 고수 중 선택해줄래?")
+    alert("하수, 중수, 고수 중 선택해줘~")
     return false;
   }
 
