@@ -49,36 +49,34 @@
 
     <section id = "input" class="mx-auto my-5 py-5 px-3">
       <p>너에 대해 알려 줄래?</p>
-      <form method="get" action="start.js">
-        성별: <input type="radio" name="sex" value="male"/>남성
-           <input type="radio" name="sex" value="female"/>여성<br>
 
-        <p></p>
+
+        성별: <input type="radio" name="sex" value="male"/>남성
+           <input type="radio" name="sex" value="female"/>여성<br><br>
         출생년도: <select name="year" size="1">
             <option>2014</option> <option>2013</option> <option>2012</option> <option>2011</option>
             <option>2010</option> <option>2009</option> <option>2008</option> <option>2007</option>
             <option>2006</option>
-        </select>
-        <p></p>
-        <p>
+        </select><br>
         나의 경제 이해도는? <br>
         수준: <input type="checkbox" name="goods" value="tech"/>하수
           <input type="checkbox" name="goods" value="idol"/>중수
           <input type="checkbox" name="goods" value="food"/>고수
         <br><br>
-
         너가 가장 좋아하는 게 뭐야?<br>
 
-        <form method="get" action="start.js" id ="preference">
           <input type="radio" name="preference" value="food" />음식
           <input type="radio" name="preference" value="tech"/>전자기기
           <input type="radio" name="preference" value="culture"/>문화생활<br>
           <br>
+
         교육 받기 전 각오: <br>
         <textarea class="col-lg-6 col-md-6 col-sm-6 col-6 mx-auto" name="comments" rows="3" cols="10"/></textarea>
         </p> <hr>
-      </form>
-      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goToGift()">다음</button>
+
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goToGift()">다음</button>
+
+
     </section>
 
 
@@ -204,8 +202,8 @@
 
 
     <section id="result_2" class="mx-auto my-5 py-5 px-3">
-      <h1>수고했어 ~ 선물줄게</h1>
-      <p>결과 페이지는 사용자가 초반에 선택한 관심사에 따라 달리 보여질 예정입니다.</p>
+      <h1>수고했어~</h1>
+
       <div class="resultname_2">
       </div>
       <div id="resultImg_2" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">

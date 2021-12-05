@@ -9,6 +9,8 @@ const result_2 = document.querySelector("#result_2");
 const endPoint = 3; //심리테스트 개수
 const endPoint_2 = 5; // 퀴즈 질문 개수
 
+let user_prefer;
+
 const select = [0, 0, 0];
 const select_2 = [0, 0];
 
@@ -124,7 +126,15 @@ function goInput(){
 }
 
 function goToGift(){
-  const gift = document.getElementById("preference");
+  var x= document.getElementsByName("preference").length;
+  for(var i=0;i<x;i++){
+    if(document.getElementsByName("preference")[i].checked==true){
+      user_prefer = document.getElementsByName("preference")[i].value;
+    }
+  }
+
+  console.log(user_prefer);
+
   input.style.WebkitAnimation = "fadeOut 1s"; //1초간
   input.style.animation = "fadeOut 1s";
   setTimeout(() => {
@@ -261,23 +271,48 @@ function goResult_2(){
 function setResult_2(){
   let point = calResult_2();
   const resultName_2 = document.querySelector('.resultname_2');
-  resultName_2.innerHTML = infoList_2[point].name;
+
+  if(user_prefer == "food"){
+    resultName_2.innerHTML = infoList_2[point].name;
+  }
+  if(user_prefer == "tech"){
+    resultName_2.innerHTML = infoList_3[point].name;
+  }
+  if(user_prefer == "culture"){
+    resultName_2.innerHTML = infoList_4[point].name;
+  }
+
 
   var resultImg_2 = document.createElement('img');
   const imgDiv = document.querySelector('#resultImg_2');
-  var imgURL = 'img/image-' + point + '.jpeg';
+  let img_point = point +1;
+  var imgURL = 'img/interest/' + user_prefer  + img_point + '.jpg';
   resultImg_2.src = imgURL;
   resultImg_2.alt = point;
   resultImg_2.classList.add('img-fluid');
   imgDiv.appendChild(resultImg_2);
 
   const resultDesc_2 = document.querySelector('.resultDesc_2');
-  resultDesc_2.innerHTML = infoList_2[point].desc;
+
+  if(user_prefer == "food"){
+    resultDesc_2.innerHTML = infoList_2[point].desc;
+  }
+  if(user_prefer == "tech"){
+    resultDesc_2.innerHTML = infoList_3[point].desc;
+  }
+  if(user_prefer == "culture"){
+    resultDesc_2.innerHTML = infoList_4[point].desc;
+  }
 }
 
 function calResult_2(){
   console.log(select_2);
-  var result = select.indexOf(Math.max(...select_2));
+  var result = select_2[1];
+  console.log(result);
+  if(result >0){
+    result -=1;
+  }
+  console.log(result);
   return result;
 }
 
