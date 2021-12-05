@@ -126,6 +126,22 @@ function goInput(){
 }
 
 function goToGift(){
+
+  if(document.getElementsByName("sex")[0].checked==false && document.getElementsByName("sex")[1].checked==false){
+    alert("성별 체크해줘~")
+    return false;
+  }
+
+  if(document.getElementsByName("goods")[0].checked==false && document.getElementsByName("goods")[1].checked==false&&document.getElementsByName("goods")[2].checked==false){
+    alert("하수, 중수, 고수 중 선택해줄래?")
+    return false;
+  }
+
+ if(document.getElementsByName("preference")[0].checked==false && document.getElementsByName("preference")[1].checked==false&&document.getElementsByName("preference")[2].checked==false){
+   alert("음식, 전자기기, 문화생활 중 하나 선택해줘~")
+   return false;
+ }
+
   var x= document.getElementsByName("preference").length;
   for(var i=0;i<x;i++){
     if(document.getElementsByName("preference")[i].checked==true){
