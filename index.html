@@ -29,7 +29,24 @@
     <link rel="stylesheet" href="./css/quiz_main.css">
     <link rel="stylesheet" href="./css/quiz.css">
     <link rel="stylesheet" href="./css/result_2.css">
+    <link rel="stylesheet" href="./css/count.css">
+
+    <!-- sound -->
+    <audio id='audio_play' src='./snd/button-30.mp3'></audio>
+    <script type="text/javascript">
+    function play() {
+        var audio = document.getElementById('audio_play');
+        if (audio.paused) {
+            audio.play();
+        }else{
+            audio.pause();
+            audio.currentTime = 0
+        }
+    }
+    </script>
+
   </head>
+
 
   <body>
     <div class="container">
@@ -45,15 +62,17 @@
     </div>
       <p>안녕?</p>
       <p>나는 경희대 마스코트 '쿠옹이'야</p>
-      <p>유튜브 찍는 거 함께 할래? </p>
+      <p>브이로그 찍으러 갈건데 함께 해볼래? </p>
 
 
-      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goInput()">시작하기</button>
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goInput()"><div onclick="play()">쿠옹이 따라가기</button>
+
     </section>
 
 
     <section id = "input" class="mx-auto my-5 py-5 px-3">
-      <p>너에 대해 알려 줄래?</p>
+      <p>본격적으로 시작하기 전에!<br>
+        너에 대해 알려 줄래?</p>
 
 
         성별: <input type="radio" name="sex" value="male"/>남성
@@ -68,7 +87,7 @@
           <input type="radio" name="goods" value="idol"/>중수
           <input type="radio" name="goods" value="food"/>고수
         <br><br>
-        너가 가장 좋아하는 게 뭐야?<br>
+          너의 요즘 관심사가 뭐야?<br>
 
           <input type="radio" name="preference" value="food" />음식
           <input type="radio" name="preference" value="tech"/>전자기기
@@ -79,7 +98,7 @@
         <textarea class="col-lg-6 col-md-6 col-sm-6 col-6 mx-auto" name="comments" rows="3" cols="10"/></textarea>
         </p> <hr>
 
-        <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goToGift()">다음</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goToGift()"> <div onclick="play()"> 다음</button>
 
 
     </section>
@@ -91,7 +110,7 @@
       <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
       <img src="./img/go_to_test.jpg" alt="mainImage" class="img-fluid">
       </div>
-      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin()"> 다음</button>
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin()"><div onclick="play()"> 다음</button>
 
     </section>
 
@@ -115,68 +134,68 @@
       </div>
       <div class="resultDesc">
       </div>
-      <button type="button" class="kakao mt-3 py-2 px-3" onclick="js:goTosimul_8()">쿠옹이가 할 말 있다는데..</button>
+      <button type="button" class="kakao mt-3 py-2 px-3" onclick="js:goTosimul_8()"><div onclick="play()">그럼 이제 쿠옹이 따라가보자~!</button>
     </section>
 
-    <section id='simul_8' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_8.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_9()">다음</button>    </section>
-    <section id='simul_9' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_9.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_10()">다음</button>    </section>
-    <section id='simul_10' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_10.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_11()">다음</button>    </section>
-    <section id='simul_11' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_11.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_12()">다음</button>    </section>
-    <section id='simul_12' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_12.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_13()">다음</button>    </section>
-    <section id='simul_13' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_13.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_14()">다음</button>    </section>
-    <section id='simul_14' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_14.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_15()">다음</button>    </section>
-    <section id='simul_15' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_15.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_16()">다음</button>    </section>
-    <section id='simul_16' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_16.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_17()">다음</button>    </section>
-    <section id='simul_17' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_17.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_18()">다음</button>    </section>
-    <section id='simul_18' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_18.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_19()">다음</button>    </section>
-    <section id='simul_19' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_19.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_20()">다음</button>    </section>
-    <section id='simul_20' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_20.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_21()">다음</button>    </section>
-    <section id='simul_21' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_21.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_22()">다음</button>    </section>
-    <section id='simul_22' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_22.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_23()">다음</button>    </section>
-    <section id='simul_23' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_23.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_24()">다음</button>    </section>
-    <section id='simul_24' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_24.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_25()">다음</button>    </section>
-    <section id='simul_25' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_25.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_26()">다음</button>    </section>
-    <section id='simul_26' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_26.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_27()">다음</button>    </section>
-    <section id='simul_27' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_27.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_28()">다음</button>    </section>
-    <section id='simul_28' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_28.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_29()">다음</button>    </section>
-    <section id='simul_29' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_29.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_30()">다음</button>    </section>
-    <section id='simul_30' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_30.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_31()">다음</button>    </section>
-    <section id='simul_31' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_31.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_32()">다음</button>    </section>
-    <section id='simul_32' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_32.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_33()">다음</button>    </section>
-    <section id='simul_33' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_33.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_34()">다음</button>    </section>
-    <section id='simul_34' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_34.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_35()">다음</button>    </section>
-    <section id='simul_35' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_35.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_36()">다음</button>    </section>
-    <section id='simul_36' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_36.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_37()">다음</button>    </section>
-    <section id='simul_37' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_37.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_38()">다음</button>    </section>
-    <section id='simul_38' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_38.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_39()">다음</button>    </section>
-    <section id='simul_39' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_39.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_40()">다음</button>    </section>
-    <section id='simul_40' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_40.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_41()">다음</button>    </section>
-    <section id='simul_41' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_41.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_42()">다음</button>    </section>
-    <section id='simul_42' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_42.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_43()">다음</button>    </section>
-    <section id='simul_43' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_43.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_44()">다음</button>    </section>
-    <section id='simul_44' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_44.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_45()">다음</button>    </section>
-    <section id='simul_45' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_45.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_46()">다음</button>    </section>
-    <section id='simul_46' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_46.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_47()">다음</button>    </section>
-    <section id='simul_47' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_47.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_48()">다음</button>    </section>
-    <section id='simul_48' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_49.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_49()">다음</button>    </section>
-    <section id='simul_49' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_49.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_50()">다음</button>    </section>
-    <section id='simul_50' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_50.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_51()">다음</button>    </section>
-    <section id='simul_51' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_51.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_52()">다음</button>    </section>
-    <section id='simul_52' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_52.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_53()">다음</button>    </section>
-    <section id='simul_53' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_53.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_54()">다음</button>    </section>
-    <section id='simul_54' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_54.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_55()">다음</button>    </section>
-    <section id='simul_55' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_55.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_56()">다음</button>    </section>
-    <section id='simul_56' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_56.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_57()">다음</button>    </section>
-    <section id='simul_57' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_57.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_58()">다음</button>    </section>
-    <section id='simul_58' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_58.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_59()">다음</button>    </section>
-    <section id='simul_59' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_59.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_60()">다음</button>    </section>
-    <section id='simul_60' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_60.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_61()">다음</button>    </section>
+    <section id='simul_8' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_8.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_9()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_9' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_9.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_10()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_10' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_10.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_11()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_11' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_11.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_12()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_12' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_12.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_13()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_13' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_13.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_14()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_14' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_14.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_15()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_15' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_15.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_16()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_16' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_16.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_17()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_17' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_17.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_18()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_18' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_18.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_19()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_19' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_19.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_20()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_20' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_20.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_21()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_21' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_21.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_22()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_22' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_22.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_23()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_23' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_23.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_24()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_24' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_24.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_25()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_25' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_25.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_26()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_26' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_26.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_27()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_27' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_27.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_28()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_28' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_28.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_29()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_29' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_29.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_30()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_30' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_30.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_31()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_31' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_31.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_32()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_32' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_32.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_33()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_33' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_33.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_34()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_34' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_34.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_35()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_35' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_35.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_36()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_36' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_36.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_37()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_37' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_37.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_38()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_38' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_38.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_39()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_39' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_39.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_40()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_40' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_40.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_41()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_41' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_41.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_42()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_42' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_42.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_43()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_43' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_43.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_44()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_44' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_44.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_45()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_45' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_45.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_46()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_46' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_46.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_47()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_47' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_47.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_48()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_48' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_48.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_49()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_49' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_49.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_50()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_50' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_50.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_51()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_51' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_51.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_52()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_52' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_52.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_53()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_53' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_53.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_54()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_54' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_54.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_55()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_55' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_55.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_56()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_56' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_56.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_57()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_57' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_57.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_58()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_58' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_58.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_59()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_59' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_59.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_60()"><div onclick="play()">다음</button>    </section>
+    <section id='simul_60' class="mx-auto my-5 py-5 px-3"> <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <img src="./img/simulation/scene_60.jpg" alt="mainImage" class="img-fluid">    </div>    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goTosimul_61()"><div onclick="play()">다음</button>    </section>
 
     <section id="simul_61"  class="mx-auto my-5 py-5 px-3">
       <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
       <img src="./img/simulation/scene_61.jpg" alt="mainImage" class="img-fluid">
     </div>
-      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goToquiz_main()">다음</button>
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goToquiz_main()"><div onclick="play()">다음</button>
     </section>
 
 
@@ -189,7 +208,7 @@
         마지막으로 확인할 겸 퀴즈까지만 풀어보자!<br>
         그럼 화이팅!
       </p>
-      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin_2()">퀴즈 시작</button>
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin_2()"><div onclick="play()">퀴즈 시작</button>
     </section>
 
 
@@ -216,8 +235,29 @@
       </div>
       <div class="resultDesc_2">
       </div>
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:goCount()"><div onclick="play()">다음으로 넘어가기</button>
+      <button type="button" class="btn btn-outline-secondary mt-3" onclick="js:goTosimul_8()"><div onclick="play()">복습하러 돌아가기</button>
+
     </section>
 
+
+    <section id = "count" class="mx-auto my-5 py-5 px-3">
+
+      <p>진짜 선물이 아니라서 미안해~<br><br>
+      그래도 오늘 쿠옹이와 함께 다니면서 배운 것들을 활용하면 <br>
+      네가 돈 모아서 꼭 살 수 있을거야!<br>
+      이자율 2%의 예금으로 얼마를 모을 수 있을 지 한 번 계산해볼래?<br></p>
+
+      <p><br> <input type="number" maxlength="8" name="forfirst" id="forfirst" value="first">  원을 넣고 </p>
+      <p><br></p>
+      <p> <input type="number" maxlength="8" name="formonth" id="formonth" value="month">개월 기다리면</p>
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:Counting()">계산하기</button>
+      <p></p>
+      <p id="output"></p>
+
+
+
+    </section>
 
     <script src="./js/data.js" charset="utf-8"></script>
     <script src="./js/start.js" charset="utf-8"></script>

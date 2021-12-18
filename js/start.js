@@ -5,6 +5,7 @@ const result = document.querySelector("#result");
 const quiz_main = document.querySelector("#quiz_main");
 const quiz = document.querySelector("#quiz");
 const result_2 = document.querySelector("#result_2");
+const count = document.querySelector("#count");
 
 const endPoint = 3; //심리테스트 개수
 const endPoint_2 = 5; // 퀴즈 질문 개수
@@ -333,6 +334,25 @@ function calResult_2(){
   return result;
 }
 
+function goCount(){
+  result_2.style.WebkitAnimation = "fadeOut 1s";
+  result_2.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    count.style.WebkitAnimation = "fadeIn 1s";
+    count.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      result_2.style.display = "none";
+      count.style.display = "block"
+    }, 450)})
+}
+
+function Counting(){
+  var x = document.getElementById("forfirst").value;  //x : 원금 p : 이자율 t : 기간
+  var p = 0.02;
+  var t = document.getElementById("formonth").value;
+  var answer = Math.round(x*(1+0.02/12)**t);
+  document.getElementById("output").innerHTML = answer + "원 모을 수 있어!" +"<br>"+ "그럼 화이팅! 쿠옹이가 응원할게~";
+}
 
 function addAnswer_2(answerText, qIdx, idx){
   var a = document.querySelector('.answerBox_2');
